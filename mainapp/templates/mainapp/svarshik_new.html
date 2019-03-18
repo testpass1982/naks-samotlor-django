@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Аттестационный центр НАКС - Самотлор</title>
+
+    <!-- BOOTS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <!-- SCRIPT -->
+    <script src="js/w3.js"></script>
+    <!-- END SCRIPT -->
+
+    <!-- <link rel="stylesheet" href="fonts/font.css"> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+
+    <!-- HEADER -->
+</head>
+
+<body>
+
+    <!-- Include HEADER -->
+    <div w3-include-html="includes/header.html"></div>
+    <!-- End Include HEADER -->
+
+    <!-- Include HEADER -->
+    <div w3-include-html="includes/modal-windows.html"></div>
+    <!-- End Include HEADER -->
+
+    <!-- Include MENU-header -->
+    <div w3-include-html="includes/menu-header.html"></div>
+    <!-- End Include MENU-header -->
+
+
+
+    <!-- Include BG_HEADER -->
+    <div w3-include-html="includes/bg-header-block.html"></div>
+    <!-- End Include BG_HEADER -->
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section__header d-inline-block">Услуги центра</div>
+            </div>
+
+        </div>
+
+        <button class="back__to__main" id="svarshik">
+            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
+                    alt=""> На главную</a>
+        </button>
+
+
+        <div class="row">
+            <div class="col-xl-2">
+            </div>
+            <div class="col-xl-8">
+                <div class="service__one">
+                    <div class="header__service__name d-inline-block">
+                        Аттестация - Специалиста сварочного <br> производства
+                    </div>
+                    <div class="srok__deistvya d-inline-block float-right">
+                        Срок действия удостоверения - 2 года.
+                    </div>
+                    <p class="service__small__text">
+                        В соответствии с ПБ 03-273-99 «Правила аттестации сварщиков и специалистов сварочного
+                        производства» и РД 03-495-02 «Технологический регламент проведения аттестации сварщиков и
+                        специалистов сварочного производства»
+                    </p>
+                    <button class="podat__zayavku" data-toggle="modal" data-target="#modal-statement">
+                        Подать заявку на аттестацию
+
+                    </button>
+                </div>
+                <div class="box__rules">
+                    <p class="header__rules">
+                        Правила аттестации
+                    </p>
+                    <p class="rules__link"><a href="" title="Скачать документ" download="">• ПБ 03-273-99</a></p>
+                    <p class="rules__link"><a href="" title="Скачать документ" download="">• РД 03-495-02</a></p>
+                </div>
+                <div class="box__infromation__or__specialist">
+                    <p class="header__service__two">Перечень видов (способов) сварки, по которым <br> производится
+                        аттестация в Аттестационном пункте № СУР - 20АЦ</p>
+                    <div class="perechen__box">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <td>•ААДП</td>
+                                    <td>•АПГ</td>
+                                    <td>•АПС</td>
+                                    <td>•КСО</td>
+                                    <td>•МАДП</td>
+                                    <td>•МП</td>
+                                </tr>
+                                <tr>
+                                    <td>•КСО</td>
+                                    <td>•МАДП</td>
+                                    <td>•МП</td>
+                                    <td>•РАД</td>
+                                    <td>•РАДН</td>
+                                    <td>•РД</td>
+                                </tr>
+                                <tr>
+                                    <td>•АФ</td>
+                                    <td>•АФПН</td>
+                                    <td>•Г</td>
+                                    <td>•МПГ</td>
+                                    <td>•МПС</td>
+                                    <td>•МФ</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="box__info__specialist">
+                    <p class="header__box__info">
+                        Для заключения договора на аттестацию сварщика и зачисления в группу специальной подготовки
+                        перед аттестацией заявитель представляет в аттестационный центр следующие документы:
+                    </p>
+                    <div class="box__specialist__text">
+                        <p class="specialist__text__small">
+                            • Карточку предприятия с банковскими реквизитами;
+                        </p>
+                        <p class="specialist__text__small">
+                            • Заявку в 2-х экземплярах (номер присваивается в аттестационном центре);
+                        </p>
+                        <p class="specialist__text__small">
+                            • Документ и копию документа о начальной подготовке (переподготовке, повышении
+                            квалификации) по специальности;
+                        </p>
+                        <p class="specialist__text__small">
+                            •Документ и копию документа о повышении квалификации с присвоенным разрядом не ниже
+                            указанного в руководящей и нормативно-технической документации на сварку;
+                        </p>
+                        <p class="specialist__text__small">
+                            • Аттестационное удостоверение (если аттестация не первичная);
+                        </p>
+                        <p class="specialist__text__small">
+                            • Справку об общем стаже работы по сварке (копию или выписку из трудовой книжки);
+                        </p>
+                        <p class="specialist__text__small">
+                            • Цветную фотографию размером 3*4;
+                        </p>
+                        <p class="specialist__text__small">
+                            • Медицинскую справку установленного образца об отсутствии противопоказаний к работе
+                            сварщиком.
+                        </p>
+                    </div>
+                    <div class="box__yellow_bg">
+                        <p class="specialist__text__small">Если сварщик имеет опыт работы по ручной
+                            сварке, то в стаж его работы при аттестации на сварку механизированными и автоматическими
+                            способами сварки
+                            разрешается засчитывать стаж работы по ручной сварке.</p>
+                        <p class="specialist__text__small">Если сварщик имеет опыт работы по механизированным способам
+                            сварки, то в стаж его работы при аттестации на сварку автоматическими способами сварки
+                            разрешается засчитывать стаж работы по механизированным способам сварки.</p>
+                        <p class="specialist__text__small">Если кандидат самостоятельно представляет заявку на
+                            проведение аттестации, он должен иметь разряд не ниже 4-го.</p>
+                    </div>
+                    <p class="header__box__info">
+                        Аттестация сварщиков <br>
+                        подразделяется на 4 звена
+                    </p>
+                    <p class=""></p>
+                    <div class="line__text"></div>
+                    <p class="specialist__text__zveno">
+                        Первичную аттестацию, которую проходят сварщики, не имевшие ранее допуска к сварке соединений
+                        оборудования, конструкций и трубопроводов, подконтрольных Ростехнадзору.
+                    </p>
+                    <p class="specialist__text__zveno">
+                        Периодическую аттестацию, которую проходят сварщики в целях продления указанного срока действия
+                        их аттестационных удостоверений на выполнение соответствующих сварочных работ.
+                    </p>
+                    <p class="specialist__text__zveno">
+                        Дополнительную аттестацию, которую проходят сварщики, прошедшие первичную аттестацию, перед их
+                        допуском к сварочным работам, не указанным в их аттестационных удостоверениях, а также после
+                        перерыва свыше 6 месяцев в выполнении сварочных работ, указанных в их аттестационных
+                        удостоверениях.
+                    </p>
+                    <p class="specialist__text__zveno">
+                        Внеочередную аттестацию, которую проходят сварщики перед их допуском к выполнению сварки после
+                        их временного отстранения от работы за нарушение технологии сварки или повторяющееся
+                        неудовлетворительное качество выполненных ими производственных сварных соединений.
+                    </p>
+                    <div class="box__yellow_bg">
+                        <p class="specialist__text__small">Аттестация сварщиков для работы на объектах МН ОАО «АК
+                            «Транснефть» проводится с учетом дополнительных требований и особенностей выполнения работ
+                            на объектах ОАО «АК «Транснефть», изложенных в <a href="#" download="">РД-03.120.10-КТН-001-11</a>
+                            «Положение об аттестации сварочного производства на объектах ОАО «АК «Транснефть»»</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2">
+            </div>
+        </div>
+
+
+
+        <button class="back__to__main" id="profstandarti">
+            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
+                    alt=""> На главную</a>
+        </button>
+    </div>
+    <div class="line__otstup"></div>
+
+
+
+    <!-- Include BG_HEADER -->
+    <div w3-include-html="includes/info-block.html"></div>
+    <!-- End Include BG_HEADER -->
+
+
+    <!-- Include FOOTER -->
+    <div w3-include-html="includes/footer.html"></div>
+    <!-- End Include FOOTER -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+  <script src="js/script.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/jquery.fancybox.js"></script>
+  <script src="/js/jquery.maskedinput.js"></script>
+  <script src="/js/jquery.maskedinput.min.js"></script>
+
+
+  <script>
+    w3.includeHTML();
+  </script>
+<script>
+    $(document).ready(function() {    
+      $("body").css("opacity", "1");
+    });
+  </script>
+</body>
+
+</html>
