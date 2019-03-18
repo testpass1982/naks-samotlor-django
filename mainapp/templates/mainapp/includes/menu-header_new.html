@@ -1,4 +1,5 @@
 {% load static %}
+{% load link_holders %}
 <!-- Меню -->
 <div class="menu__background">
   <div class="container ">
@@ -22,7 +23,7 @@
               <!-- Links -->
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Главная
+                  <a class="nav-link" href="{% url 'index' %}">Главная
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
@@ -33,7 +34,7 @@
                     aria-haspopup="true" aria-expanded="false">Центр</a>
                   <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="komisiya.html#komisiya">Состав комисиии</a>
-                    <a class="dropdown-item" href="o-kompanyi.html#o-kompaniy">О Нас</a>
+                    <a class="dropdown-item" href="{% link_holder 'ABOUT' %}">О Нас</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">

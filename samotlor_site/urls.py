@@ -34,6 +34,8 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('messages/', mainapp.messages, name='messages'),
     path('services/', mainapp.services, name="services"),
+    path('attkomiss/', mainapp.attkomiss, name="attkomiss"),
+    path('politics/', mainapp.politics, name="politics"),
     path('reestrsp/', mainapp.reestrsp, name='reestrsp'),
     # path('api/', include(router.urls)),
 ]

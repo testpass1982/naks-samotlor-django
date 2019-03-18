@@ -383,3 +383,15 @@ def reestrsp(request, type=None):
         content = None
 
     return render(request, 'mainapp/reestr.html', content)
+
+def attkomiss(request):
+    content = {
+        'title': 'attkomiss',
+    }
+    return render(request, 'mainapp/komisiya_new.html', content)
+
+def politics(request):
+    content = {
+        'title': 'politics',
+    }
+    return render(request, 'mainapp/politika-konfidentsialnosti_new.html', content)
