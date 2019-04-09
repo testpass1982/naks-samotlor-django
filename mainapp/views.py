@@ -7,7 +7,7 @@ from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Post, PostPhoto, Tag, Category, Document, Article, Message, Contact
 from .models import Registry, Menu
-from .models import Staff
+from .models import Staff, ChlenKomissii
 from .forms import PostForm, ArticleForm, DocumentForm
 from .forms import SendMessageForm, SubscribeForm, AskQuestionForm, DocumentSearchForm, SearchRegistryForm
 from .adapters import MessageModelAdapter
@@ -19,7 +19,7 @@ from .registry_import import Importer, data_url
 
 def index(request):
     """this is mainpage view with forms handler and adapter to messages"""
-    title = "Главная - НАКС Смоленск"
+    title = "Главная - НАКС Самотлор"
     tracker = MessageTracker()
     if request.method == 'POST':
         request_to_dict = dict(zip(request.POST.keys(), request.POST.values()))
@@ -45,23 +45,25 @@ def index(request):
             raise ValidationError('form not valid')
 
     main_page_news = Post.objects.filter(
-        publish_on_main_page=True).order_by('-published_date')[:2]
+        publish_on_main_page=True).order_by('-published_date')[:3]
 
-    not_pictured_posts = Post.objects.filter(
-        secondery_main=True).order_by('-published_date')[:3]
+    # not_pictured_posts = Post.objects.filter(
+    #     secondery_main=True).order_by('-published_date')[:3]
 
-    main_page_documents = Document.objects.filter(
-        publish_on_main_page=True).order_by('-created_date')[:3]
+    # main_page_documents = Document.objects.filter(
+    #     publish_on_main_page=True).order_by('-created_date')[:3]
 
     # main_page_secondery_news = Post.objects.filter(
     #     secondery_main=True).order_by('-published_date')[:4]
-    pictured_posts = {}
+    pictured_posts = []
     for post in main_page_news:
-        pictured_posts[post] = PostPhoto.objects.filter(post__pk=post.pk).first()
-    # print(pictured_posts)
-
-    main_page_articles = Article.objects.filter(
-        publish_on_main_page=True).order_by('-published_date')[:3]
+        pictured_posts.append({
+            'post': post,
+            'image' :PostPhoto.objects.filter(post__pk=post.pk).first().image.url
+        })
+    # import pdb; pdb.set_trace()
+    # main_page_articles = Article.objects.filter(
+    #     publish_on_main_page=True).order_by('-published_date')[:3]
 
     main_page_links = Menu.objects.all()
 
@@ -71,9 +73,9 @@ def index(request):
     content = {
         'title': title,
         'pictured_posts': pictured_posts,
-        'not_pictured_posts': not_pictured_posts,
-        'articles': main_page_articles,
-        'docs': main_page_documents,
+        # 'not_pictured_posts': not_pictured_posts,
+        # 'articles': main_page_articles,
+        # 'docs': main_page_documents,
         'send_message_form': SendMessageForm(),
         'subscribe_form': SubscribeForm(),
         'ask_question_form': AskQuestionForm(),
@@ -89,8 +91,13 @@ def news(request):
         publish_on_news_page=True).order_by('-created_date')
     # all_documents = Document.objects.all().order_by('-created_date')[:5]
     # side_posts = Post.objects.all().order_by('-created_date')[:4]
-    post_list = [dict({'post': post, 'picture': PostPhoto.objects.filter(
-        post__pk=post.pk).first()}) for post in all_news]
+    post_list = [dict(
+        {'post': post,
+         'image': PostPhoto.objects.filter(
+        post__pk=post.pk).first().image.url if PostPhoto.objects.filter(
+        post__pk=post.pk) else None}
+        ) for post in all_news]
+    # import pdb; pdb.set_trace()
     # показываем несколько новостей на странице
     print(post_list)
     paginator = Paginator(post_list, 6)
@@ -137,16 +144,18 @@ def details(request, pk=None, content=None):
 
         # side_related = Post.objects.filter(publish_on_news_page=True).exclude(
         #     id=pk).order_by('-published_date')[:3]
-        side_related = Document.objects.all().order_by('-created_date')[:3]
+        # side_related = Document.objects.all().order_by('-created_date')[:3]
         # side_related_posts = [dict({'post': post, 'picture': PostPhoto.objects.filter(
         #     post__pk=post.pk).first()}) for post in side_related]
+        side_related = Post.objects.filter(publish_on_news_page=True).exclude(id=pk)[:3]
+
         post_content = {
             'post': obj,
             'images': attached_images,
             'documents': attached_documents,
             'side_related': side_related,
-            'bottom_related': Article.objects.all().order_by(
-                '-created_date')[:3]
+            # 'bottom_related': Article.objects.all().order_by(
+                # '-created_date')[:3]
         }
         # print('SIDE_RELATED', post_content['side_related_posts'])
     if content == 'article':
@@ -245,7 +254,7 @@ def contact(request):
 
     context['contacts'] = contacts
 
-    return render(request, 'mainapp/kontakti.html', context)
+    return render(request, 'mainapp/contact_new.html', context)
 
 
 def messages(request):
@@ -305,7 +314,7 @@ def documents(request):
     if search_result_content:
         content.update(search_result_content)
         print('CONTENT WITH SEARCH', content)
-    return render(request, 'mainapp/documents.html', content)
+    return render(request, 'mainapp/doc_new.html', content)
 
 
 def services(request):
@@ -385,8 +394,23 @@ def reestrsp(request, type=None):
     return render(request, 'mainapp/reestr.html', content)
 
 def attkomiss(request):
+    chleny_komissii_acsp = ChlenKomissii.objects.filter(
+        tag__in=Tag.objects.filter(name='Комиссия АЦСП'))
+    chleny_komissii_acsm = ChlenKomissii.objects.filter(
+        tag__in=Tag.objects.filter(name='Комиссия АЦСМ'))
+    chleny_komissii_acso = ChlenKomissii.objects.filter(
+        tag__in=Tag.objects.filter(name='Комиссия АЦСО'))
+    chleny_komissii_acst = ChlenKomissii.objects.filter(
+        tag__in=Tag.objects.filter(name='Комиссия АЦСТ'))
+    chleny_komissii_cok = ChlenKomissii.objects.filter(
+        tag__in=Tag.objects.filter(name='Комиссия ЦОК'))
     content = {
-        'title': 'attkomiss',
+        'title': 'Аттестационная комиссия',
+        'sostav_komissii_acsp': chleny_komissii_acsp,
+        'sostav_komissii_acsm': chleny_komissii_acsm,
+        'sostav_komissii_acso': chleny_komissii_acso,
+        'sostav_komissii_acst': chleny_komissii_acst,
+        'sostav_komissii_cok': chleny_komissii_cok,
     }
     return render(request, 'mainapp/komisiya_new.html', content)
 

@@ -1,7 +1,7 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="container">
+    <div class="container" id="page-top">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section__header d-inline-block">Контакты</div>
@@ -10,38 +10,38 @@
         </div>
 
         <button class="back__to__main" id="contact">
-            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
+            <a href="{% url 'index' %}"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
                     alt=""> На главную</a>
         </button>
 
         <div class="row">
             <div class="col-xl-2">
-            </div>          
-            
+            </div>
+
                   <div class="col-xl-4">
                      <div class="header__tag">
                          Телефоны
                      </div>
                      <p class="tel d-inline-block">
-                            8 (902) 855-80-81                                                 
+                            8 (902) 855-80-81
                       </p>
                      <p class="tel__right d-inline-block">
-                            8 (902) 855-47-02                                                
+                            8 (902) 855-47-02
                       </p>
                      <p class="tel d-inline-block">
-                            8 (919) 53-98-333                                           
+                            8 (919) 53-98-333
                       </p>
                      <p class="tel__right d-inline-block">
-                            8 (904) 870-19-05                                                
+                            8 (904) 870-19-05
                       </p>
                       <div class="header__tag">
                         Адрес
                     </div>
                     <p class="mail">
                         628600, Ханты-Мансийский автономный округ – Югра, г. Нижневартовск, Западный промышленный узел, панель 4, ул. Индустриальная, д. 89
-                     </p>                     
+                     </p>
                   </div>
-                            
+
                   <div class="col-xl-2">
                      <div class="header__tag">
                          Почта
@@ -50,7 +50,7 @@
                       <a href="mailto:sur20ac@mail.ru" title="Написать письмо">sur20ac@mail.ru</a>
                       <a href="mailto:sur15acsamotlor@mail.ru   " title="Написать письмо">sur15acsamotlor@mail.ru  </a>
                       </p>
-                  </div> 
+                  </div>
             <div class="col-xl-2"></div>
         </div>
         <div class="row">
@@ -65,10 +65,9 @@
             </div>
         </div>
 
-
         <div class="line__otstup"></div>
         <button class="back__to__main">
-            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
+            <a href="{% url 'index' %}"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
                     alt=""> На главную</a>
         </button>
     </div>
@@ -76,5 +75,5 @@
 
 
 
-   
+
 {% endblock content %}

@@ -1306,10 +1306,11 @@ p {
   background: url(/img/icon__file-01.png) center 0 no-repeat; }
 
 .bd-sidebar {
-  position: sticky;
+  /* position: sticky;
   top: 4rem;
   z-index: 1000;
-  height: calc(30vh - 4rem); }
+  height: calc(30vh - 4rem); */
+}
 
 .result__box {
   background-color: #fde6e6;

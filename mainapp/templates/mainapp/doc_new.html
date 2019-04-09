@@ -1,110 +1,47 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section__header d-inline-block">Документы</div>
-            </div>
+<div class="container" id="page-top">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section__header d-inline-block">Документы</div>
         </div>
-
-        <button class="back__to__main" id="doc">
-            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
-                    alt=""> На главную</a>
-        </button>
-
-
-        <div class="row">
-            <div class="col-xl-2">
-            </div>
-            <div class="col-xl-6">
-                <p class="header__doc">Список документов в области сварки: СУР - 20АЦ</p>
-                <p class="doc__name__list">Наименование документов</p>
-              <a href="" download="">
-                    <div class="doc__content">
-                            <p class="doc__name">РД 03-495-02 "Технологический регламент проведения аттестации сварщиков и
-                                специалистов сварочного производства"</p>
-                        </div>
-              </a>
-               <a href="" download="">
-                    <div class="doc__content">
-                            <p class="doc__name">Постановление Госгортехнадзора России №36 от 25.06.2002г. Об утверждении новой
-                                редакции "Технологического регламента проведения аттестации сварщиков и специалистов сварочного
-                                производства"</p>
-                        </div>
-               </a>
-             <a href="" download="">
-                    <div class="doc__content">
-                            <p class="doc__name">ПБ-03-273-99 "Правила аттестации сварщиков и специалистов сварочного
-                                производства"</p>
-                        </div>
-             </a>
-              <a href="" download="">
-                    <div class="doc__content">
-                            <p class="doc__name" id="doc-zayavki">Положение о порядке продления срока действия аттестационных удостоверений
-                                сварщиков и специалистов сварочного производства</p>
-                        </div>
-              </a>
-               <a href="" download="">
-                    <div class="doc__content">
-                            <p class="doc__name">Перечень групп технических устройств <br> опасных производственных объектов</p>
-                        </div>
-               </a>
-             <a href="" download="">
-                    <div class="doc__content">
-                            <p class="doc__name">Инструкция по оформлению заявок на аттестацию и результатов аттестации
-                                Заявителей - физических лиц</p>
-                        </div>
-             </a>
-               <a href="" download="">
-                    <div class="doc__content">
-                            <p class="doc__name">Требование к кандидатами <br>
-                                на аттестацию</p>                                                            
-                        </div>
-                    <div class="doc__content">
-                            <p class="doc__name">Пример заявок <br> на аттестацию</p>                                                            
-                        </div>
-                    <div class="doc__content">
-                            <p class="doc__name">Необходимые документы <br> для заявки</p>                                                            
-                        </div>
-                    <div class="doc__content">
-                            <p class="doc__name ">Продление срока <br> аттестационных удостоверений</p>                                                            
-                        </div>
-               </a>
-            </div>
-            <div class="col-xl-2 bd-sidebar">
-                    <p class="header__content__zayavka">
-                            Подать заявку на:
-                        </p>
-                        <div class="block__zayavok">
-                            <a href="specialist-svar-proizvodstva.html#specialist" class="zayavki__text ">
-                                Аттестация - специалистов <br>
-                                сварочного производства
-                            </a>
-                        </div>
-                        <div class="block__zayavok">
-                            <a href="specialist-svar-proizvodstva.html#specialist" class="zayavki__text">
-                                Аттестация - Сварщиков
-                            </a>
-                        </div>
-                        <div class="block__zayavok">
-                            <a href="center-ocenki-kvalifikaciy.html#cok" class="zayavki__text">
-                                ЦОК - Центр оценки <br> квалификаций
-                            </a>
-                        </div>
-            </div>
-        </div>
-
-
-        <div class="line__otstup"></div>
-        <button class="back__to__main">
-            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
-                    alt=""> На главную</a>
-        </button>
     </div>
+
+    <button class="back__to__main" id="doc">
+        <a href="{% url 'index' %}"> <img src="{% static 'img/back__to__main__arrow.png' %}"
+                class="arrow__back__to__main text-align-center" alt=""> На главную</a>
+    </button>
+
+
+        <div class="row">
+            <div class="offset-xl-2 col-xl-6">
+                <p class="header__doc">Список документов ООО АЦ "НАКС Самотлор"</p>
+                <p class="doc__name__list">Наименования документов</p>
+                {% for doc in documents %}
+                <a href="{{ doc.document.url }}">
+                    <div class="doc__content">
+                        <p class="doc__name">{{ doc.title }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <div class="col-xl-4 bd-sidebar">
+              {% include 'mainapp/includes/side_panel_sasv.html' %}
+            </div>
+        </div>
+
+
+
     <div class="line__otstup"></div>
+    <button class="back__to__main">
+        <a href="{% url 'index' %}"> <img src="{% static 'img/back__to__main__arrow.png' %}"
+                class="arrow__back__to__main text-align-center" alt=""> На главную</a>
+    </button>
+</div>
+<div class="line__otstup"></div>
 
 
 
-   
+
 {% endblock content %}

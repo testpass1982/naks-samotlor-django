@@ -86,7 +86,7 @@ p {
         box-shadow: none;
         outline: none;
     }
-   
+
 }
 
 
@@ -398,9 +398,9 @@ p {
     a{
         color: #fff;
         &:hover{
-            color: #d4d4d4; 
+            color: #d4d4d4;
         }
-    } 
+    }
 }
 
 // Background + info
@@ -540,7 +540,7 @@ p {
         margin-top: 10px;
     }
 
-    @media screen and (max-width: 460px) {      
+    @media screen and (max-width: 460px) {
         margin-bottom: 15px;
     }
 
@@ -622,7 +622,7 @@ p {
 // Заголовки на страницах
 
 .section__header {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 400;
     color: #000;
     margin-bottom: 25px;
@@ -666,7 +666,7 @@ p {
 .news__naks__tag__maine {
     font-size: 14px;
     color: #313131;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
     background-color: #f0f0f0;
     border-radius: 55px;
     padding: 5px 15px;
@@ -723,7 +723,7 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-   
+
 }
 
 .box__news__content__main:hover {
@@ -756,7 +756,7 @@ p {
 
 .news__tag__all-news a{
     font-size: 14px;
-    margin-top: 25px;  
+    margin-top: 25px;
     background-color: transparent;
     border-radius: 55px;
     border: 1px solid #3164a2;
@@ -774,7 +774,7 @@ p {
     color: #2e3e60;
     font-size: 14px;
     border-radius: 0px;
-    
+
 }
 
 .page-item {
@@ -847,7 +847,7 @@ margin-bottom: 25px;
 .line__news__end{
     border: 0.5px solid #ebebeb;
     margin-top: 25px;
-    margin-bottom: 25px;    
+    margin-bottom: 25px;
 }
 .prikrep__doc{
     font-size: 14px;
@@ -857,9 +857,9 @@ margin-bottom: 25px;
 
 .soglashenie__button {
     background-color: transparent;
-    border: none;   
+    border: none;
     padding: 0;
-    margin-bottom: 25px;    
+    margin-bottom: 25px;
 }
 
 .soglashenie__button__text {
@@ -917,17 +917,17 @@ margin-bottom: 25px;
 
 .news__tag__inside__nolink{
     font-size: 14px;
-    color: #313131;   
+    color: #313131;
     background-color: #f0f0f0;
     border-radius: 55px;
     padding: 5px 15px;
     margin-top: 25px;
     // margin-bottom: 5px;
-    width: 150px;  
+    width: 150px;
 }
 
 
-//  Инфоблок 
+//  Инфоблок
 
 
 .info__block {
@@ -1623,7 +1623,7 @@ margin-bottom: 25px;
 
 .ya__map {
     margin-bottom: 25px;
-}   
+}
 
 // Документы
 
@@ -1632,7 +1632,7 @@ margin-bottom: 25px;
     font-weight: 400;
     color: #000;
     margin-top: 25px;
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
 }
 
 .doc__name__list{
@@ -1651,23 +1651,23 @@ border-left: 2px solid #eeeeee;
 &:hover{
     background-color: #f5f5f5;
     transition: 0.2s;
-    border-left: 2px solid #275295;    
+    border-left: 2px solid #275295;
 }
 }
 
 .doc__name{
     position: relative;
     font-size: 15px;
-    color: #275295;  
-    padding-left: 55px;   
+    color: #275295;
+    padding-left: 55px;
 }
 
 .doc__name::before {
     content: '';
     position: absolute;
     width: 45px;
-    height: 45px;   
-    left: 0;   
+    height: 45px;
+    left: 0;
     background: url(/img/icon__file-01.png) center 0 no-repeat;
 }
 .bd-sidebar{
@@ -1701,7 +1701,7 @@ border-left: 2px solid #eeeeee;
     color: #000;
     @media screen and (max-width: 576px) {
         margin-top: 15px;
-    }    
+    }
 }
 
 .line__table{
@@ -1716,7 +1716,7 @@ border-left: 2px solid #eeeeee;
     color: #5ba4dd;
       @media screen and (max-width: 576px) {
         margin-top: 15px;
-    }        
+    }
 }
 
 .info__table{
@@ -1753,5 +1753,5 @@ border-left: 2px solid #eeeeee;
     font-weight: 400;
     color: #000;
     margin-top: 25px;
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
 }

@@ -11,7 +11,7 @@
         </div>
 
         <button class="back__to__main" id="o-kompaniy">
-            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
+            <a href="{% url 'index' %}"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
                     alt=""> На главную</a>
         </button>
 
@@ -235,7 +235,7 @@
 
         <div class="line__otstup"></div>
         <button class="back__to__main">
-            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
+            <a href="{% url 'index' %}"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
                     alt=""> На главную</a>
         </button>
     </div>
@@ -243,5 +243,5 @@
 
 
 
-    
+
 {% endblock content %}

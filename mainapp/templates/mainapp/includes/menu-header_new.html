@@ -33,34 +33,36 @@
                   <a class="nav__link__two dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">Центр</a>
                   <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="komisiya.html#komisiya">Состав комисиии</a>
-                    <a class="dropdown-item" href="{% link_holder 'ABOUT' %}">О Нас</a>
+                    <a class="dropdown-item" href="{% link_holder 'ABOUT' %}">{% title_holder 'ABOUT' %}</a>
+                    <a class="dropdown-item" href="{% link_holder 'OBL_D' %}">{% title_holder 'OBL_D' %}</a>
+                    <a class="dropdown-item" href="{% url 'attkomiss' %}#page-top">Состав комисиии</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav__link__two dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">Услуги</a>
                   <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="specialist-svar-proizvodstva.html#specialist">Аттестация специалиста
-                      <br> сварочного производства</a>
-                    <a class="dropdown-item" href="svarshik.html#svarshik">Аттестация сварщиков</a>
-                    <a class="dropdown-item" href="center-ocenki-kvalifikaciy.html#cok">ЦОК - Центр оценки квалификации</a>
-
+                    <a class="dropdown-item" href="{% link_holder 'ATT_SVARSHIKOV' %}">{% title_holder 'ATT_SVARSHIKOV' %}</a>
+                    <a class="dropdown-item" href="{% link_holder 'ATT_SP_SV' %}">{% title_holder 'ATT_SP_SV' %}</a>
+                    <a class="dropdown-item" href="{% link_holder 'ATT_SM' %}">{% title_holder 'ATT_SM' %}</a>
+                    <a class="dropdown-item" href="{% link_holder 'ATT_SO' %}">{% title_holder 'ATT_SO' %}</a>
+                    <a class="dropdown-item" href="{% link_holder 'ATT_ST' %}">{% title_holder 'ATT_ST' %}</a>
+                    <a class="dropdown-item" href="{% link_holder 'COK' %}">{% title_holder 'COK' %}</a>
                   </div>
                 </li>
 
                 <li class="nav-item active">
-                  <a class="nav-link" href="doc.html#doc">Документы
+                  <a class="nav-link" href="{% url 'documents' %}#page-top">Документы
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="reestr.html#reestr">Реестр САСв
+                  <a class="nav-link" href="{% link_holder 'OK_SV' %}">{% title_holder 'OK_SV' %}
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="contact.html#contact">Контакты
+                  <a class="nav-link" href="{% url 'contact' %}#page-top">Контакты
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
