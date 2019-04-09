@@ -1,5 +1,5 @@
 {% extends 'mainapp/base.html' %}
-{% load static %}
+{% load static %}{% load scribbler_tags %}
 {% block content %}
     <div class="container" id="page-top">
         <div class="row">
@@ -22,6 +22,7 @@
                      <div class="header__tag">
                          Телефоны
                      </div>
+                     {% scribble 'contact_phones' %}
                      <p class="tel d-inline-block">
                             8 (902) 855-80-81
                       </p>
@@ -34,22 +35,27 @@
                      <p class="tel__right d-inline-block">
                             8 (904) 870-19-05
                       </p>
+                     {% endscribble %}
                       <div class="header__tag">
                         Адрес
                     </div>
+                    {% scribble 'contact_address' %}
                     <p class="mail">
                         628600, Ханты-Мансийский автономный округ – Югра, г. Нижневартовск, Западный промышленный узел, панель 4, ул. Индустриальная, д. 89
                      </p>
+                    {% endscribble %}
                   </div>
 
                   <div class="col-xl-2">
                      <div class="header__tag">
                          Почта
                      </div>
+                     {% scribble 'contact_emails' %}
                      <p class="mail">
                       <a href="mailto:sur20ac@mail.ru" title="Написать письмо">sur20ac@mail.ru</a>
                       <a href="mailto:sur15acsamotlor@mail.ru   " title="Написать письмо">sur15acsamotlor@mail.ru  </a>
                       </p>
+                     {% endscribble %}
                   </div>
             <div class="col-xl-2"></div>
         </div>
