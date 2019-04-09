@@ -1,4 +1,4 @@
-{% load static %}{% load link_holders %}
+{% load static %}{% load link_holders %}{% load scribbler_tags %}
 <!-- footer -->
 <div class="footer__box">
   <div class="container">
@@ -51,10 +51,12 @@
         </div>
         <p class="footer__mail text-right">
           <a href="mailto:sur20ac@mail.ru" title="Написать письмо">sur20ac@mail.ru</a></p>
-        <p class="footer__adres text-right">
+          {% scribble 'footer_address' %}
+          <p class="footer__adres text-right">
           628600, Ханты-Мансийский автономный округ – Югра, г. Нижневартовск,
           Западный промышленный узел, панель 4, ул. Индустриальная, д. 89
-        </p>
+          </p>
+          {% endscribble %}
         <p class="adres__on__map text-right">
           <a data-fancybox="" data-options="" title="Открыть карту" href="https://www.google.com/maps/place/%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+89,+%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5%D0%B2%D0%B0%D1%80%D1%82%D0%BE%D0%B2%D1%81%D0%BA,+%D0%A5%D0%B0%D0%BD%D1%82%D1%8B-%D0%BC%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9+%D0%90%D0%BE,+628609/@60.9550379,76.5204629,18z/data=!4m8!1m2!2m1!1z0JfQsNC_0LDQtNC90YvQuSDQv9GA0L7QvNGL0YjQu9C10L3QvdGL0Lkg0YPQt9C10LssINC_0LDQvdC10LvRjCA0LCDRg9C7LiDQmNC90LTRg9GB0YLRgNC40LDQu9GM0L3QsNGPLCDQtC4gODk!3m4!1s0x436d3ec03151fe91:0x1f72c20a5fde0e3e!8m2!3d60.955146!4d76.520774">
             Посмотреть на карте</a>

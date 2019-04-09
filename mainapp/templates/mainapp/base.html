@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %}{% load scribbler_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +23,9 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
   <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
-
+  {% comment %} scribbler {% endcomment %}
+  <link rel="stylesheet" href="{% static 'scribbler/css/scribbler.css' %}">
+  <script src="{% static 'scribbler/js/scribbler-min.js' %}"></script>
 
 
   <!-- HEADER -->
