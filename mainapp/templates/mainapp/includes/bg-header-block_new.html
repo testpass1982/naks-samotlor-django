@@ -1,4 +1,4 @@
-{% load static %}{% load link_holders %}
+{% load static %}{% load link_holders %}{% load scribbler_tags %}
 <!-- BG info -->
 <div class="bg-block-01">
     <div class="bg">
@@ -13,15 +13,19 @@
                         </a>
 
                         <div class="about__organization__text">
+                            {% scribble 'org_title' %}
                             <p>Аттестационный центр <br> <strong>НАКС – Самотлор</strong> </p>
+                            {% endscribble %}
                         </div>
 
                         <div class="about__organization__text__two">
+                            {% scribble 'about_org_text' %}
                             <p>Аттестационный центр «Самотлор» - является
                                 членом СРО Ассоциация «Национальное Агентство Контроля Сварки», являются действующим АЦ Системы Аттестации Сварочного
                                 производства (САСв) Ростехнадзора и оказывает услуги по аттестации сварщиков и
                                 специалистов сварочного производства, сварочных материалов, оборудования и технологий, а также оценки квалификации.
                             </p>
+                            {% endscribble %}
                         </div>
 
                         <button class="button__zayavka__online" data-toggle="modal" data-target="#modal-statement">

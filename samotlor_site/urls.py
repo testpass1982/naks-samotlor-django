@@ -37,6 +37,7 @@ urlpatterns = [
     path('attkomiss/', mainapp.attkomiss, name="attkomiss"),
     path('politics/', mainapp.politics, name="politics"),
     path('reestrsp/', mainapp.reestrsp, name='reestrsp'),
+    re_path(r'^scribbler/', include('scribbler.urls')),
     # path('api/', include(router.urls)),
 ]
 
