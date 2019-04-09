@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %}{% load link_holders %}
 <!-- BG info -->
 <div class="bg-block-01">
     <div class="bg">
@@ -18,9 +18,9 @@
 
                         <div class="about__organization__text__two">
                             <p>Аттестационный центр «Самотлор» - является
-                                членом СРО НП «Национальное Агентство Контроля Сварки» Системы Аттестации Сварочного
+                                членом СРО Ассоциация «Национальное Агентство Контроля Сварки», являются действующим АЦ Системы Аттестации Сварочного
                                 производства (САСв) Ростехнадзора и оказывает услуги по аттестации сварщиков и
-                                специалистов сварочного производства.
+                                специалистов сварочного производства, сварочных материалов, оборудования и технологий, а также оценки квалификации.
                             </p>
                         </div>
 
@@ -32,11 +32,11 @@
                         <p class="head__information">Информация <br> для заявителей</p>
 
                         <div class="block__info">
-                            <p><a href="" class="info__text__item">Область деятельности АЦ "НАКС-Самотлор"</a></p>
-                            <p><a href="" class="info__text__item">Пример заявок на аттестацию</a></p>
-                            <p><a href="doc.html#doc-zayavki" class="info__text__item">Необходимые документы для заявок</a></p>
-                            <p><a href="" class="info__text__item">Продление срока аттестационных удостоверений</a></p>
-                            <p><a href="profstandarti.html#profstandarti" class="info__text__item">Профстандарты в области сварки</a></p>
+                            <p><a href="{% link_holder 'OBL_D' %}" class="info__text__item">{% title_holder 'OBL_D' %}</a></p>
+                            <p><a href="{% link_holder 'ZAYAVKI' %}" class="info__text__item">{% title_holder 'ZAYAVKI' %}</a></p>
+                            <p><a href="{% link_holder 'PRODLENIYE' %}" class="info__text__item">{% title_holder 'PRODLENIYE' %}</a></p>
+                            <p><a href="{% link_holder 'OK_SV' %}" class="info__text__item">{% title_holder 'OK_SV' %}</a></p>
+                            <p><a href="{% link_holder 'PROFSTANDARDS' %}" class="info__text__item">{% title_holder 'PROFSTANDARDS' %}</a></p>
                         </div>
                     </div>
 

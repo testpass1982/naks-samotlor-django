@@ -277,3 +277,29 @@ class WeldData(models.Model):
 
     class Meta:
         abstract = True
+
+class ChlenKomissii(models.Model):
+    SP = 'Персонал'
+    SM = 'Материалы'
+    SO = 'Оборудование'
+    ST = 'Технологии'
+    OK = 'Оценка квалификации'
+    UDOST_TYPES = (
+        (SP, 'Персонал'),
+        (SM, 'Материалы'),
+        (SO, 'Оборудование'),
+        (ST, 'Технологии'),
+        (OK, 'Оценка квалификации'),
+    )
+    fio = models.CharField(u'ФИО Члена комиссии', max_length=100)
+    udost_type = models.CharField(u'Тип удостоверения', max_length=20, choices=UDOST_TYPES, default=SP)
+    udost_number = models.CharField(u'Номер удостоверения', max_length=20)
+    udost_gtu = models.CharField(u'Область распространения (ГТУ)', max_length=100)
+    udost_sp_sv = models.CharField(u'Область аттестации(способы сварки, материалы и т.д.)', max_length=200)
+    tag = models.ForeignKey(Tag, null=True, on_delete=models.SET_NULL)
+
+    class Meta:
+        verbose_name = 'Член комиссии'
+        verbose_name_plural = 'Члены комиссии'
+    def __str__(self):
+        return '{} удостоверение {}'.format(self.fio, self.udost_number)

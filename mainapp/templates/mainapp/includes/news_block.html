@@ -1,0 +1,25 @@
+    <div class="col-xl-4">
+      <div class="box__img">
+        <img src="{% if publication.image %}
+        {{ publication.image }}
+        {% else %}
+          https://place-hold.it/300x200
+        {% endif %}" class="d-block w-100" alt="">
+      </div>
+      <div class="box__news__content__main">
+        <p class="date__news__maine d-inline-block float-right">{{ publication.post.published_date }}</p>
+        <p class="news__naks__tag__maine d-inline-block">
+            {% for tag in publication.post.tags.all %}
+                {{ tag.name }}
+            {% endfor %}
+        </p>
+        <a href="{% url 'detailview' 'post' publication.post.pk %}#page-top">
+          <p class="text__content__news__main">
+            {{ publication.post.title }}
+          </p>
+          <p class="text__small__news">
+            {{ publication.post.short_description}}
+          </p>
+        </a>
+      </div>
+    </div>
