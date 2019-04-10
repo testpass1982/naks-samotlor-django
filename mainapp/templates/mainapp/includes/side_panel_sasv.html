@@ -1,22 +1,26 @@
-
+{% load link_holders %}
             <div class="box__kompanyi__block__right">
                 <p class="header__content__zayavka">
-                    Подать заявку на:
+                    Порядок оказания услуг:
                 </p>
                 <div class="block__zayavok">
-                    <a href="specialist-svar-proizvodstva.html#specialist" class="zayavki__text ">
-                        Аттестация - специалистов <br>
-                        сварочного производства
+                    <a href="{% link_holder 'ATT_SVARSHIKOV' %}" class="zayavki__text ">
+                        {% title_holder 'ATT_SVARSHIKOV' %}
                     </a>
                 </div>
                 <div class="block__zayavok">
-                    <a href="specialist-svar-proizvodstva.html#specialist" class="zayavki__text">
-                        Аттестация - Сварщиков
+                    <a href="{% link_holder 'ATT_SP_SV' %}" class="zayavki__text">
+                       {% title_holder 'ATT_SP_SV' %}
                     </a>
                 </div>
                 <div class="block__zayavok">
-                    <a href="center-ocenki-kvalifikaciy.html#cok" class="zayavki__text">
-                        ЦОК - Центр оценки <br> квалификаций
+                    <a href="{% link_holder 'CSP' %}" class="zayavki__text">
+                       {% title_holder 'CSP' %}
+                    </a>
+                </div>
+                <div class="block__zayavok">
+                    <a href="{% link_holder 'COK' %}" class="zayavki__text">
+                        {% title_holder 'COK' %}
                     </a>
                 </div>
 
@@ -29,84 +33,29 @@
                         Правила аттестации специалистов сварочного <br> производства
                     </p>
                     <p class="rules__attestion">
-                        <a href="#" download="" title="Скачать документ">
-                            • ПБ 03-273-99
+                        <a href="{% doc_holder 'PB_273' %}" download="" title="Скачать документ">
+                            • {% doc_title 'PB_273' %}
                         </a>
                     </p>
                     <p class="rules__attestion">
-                        <a href="#" download="" title="Скачать документ">
-                            • ПБ 03-273-99
+                        <a href="{% doc_holder 'RD_495' %}" download="" title="Скачать документ">
+                            • {% doc_title 'RD_495' %}
                         </a>
                     </p>
                 </div>
-                <div class="line__content__right__block"></div>
-                <p class="header__rules__attestation">
-                    Правила аттестации сварщиков
-                </p>
-                <p class="rules__attestion">
-                    <a href="#" download="" title="Скачать документ">
-                        • ПБ 03-273-99
-                    </a>
-                </p>
 
                 <div class="line__content__right__block"></div>
                 <p class="header__content__zayavka">
-                    Документы
+                    {% comment %} Другие документы
                 </p>
-                <p class="rules__attestion">
-                    <a href="#" download="" title="Скачать документ" class="">
-                        РД 03-495-02 "Технологический регламент проведения аттестации сварщиков и специалистов
-                        сварочного
-                        производства"
-                    </a>
-                </p>
-                <div class="small__line__rules"></div>
-                <p class="rules__attestion">
-                    <a href="#" download="" title="Скачать документ" class="">
+                <div class="small__line__rules"></div> {% endcomment %}
+
+                {% comment %} <p class="rules__attestion">
+                    <a data-info="POST_RD_36" href="{% doc_holder 'POST_RD_36' %}" download="" title="Скачать документ" class="">
                         Постановление Госгортехнадзора России №36 от 25.06.2002г. Об утверждении новой редакции
                         "Технологического
                         регламента проведения аттестации сварщиков и специалистов сварочного производства"
                     </a>
-                </p>
-                <div class="small__line__rules"></div>
-                <p class="rules__attestion">
-                    <a href="#" download="" title="Скачать документ" class="">
-                        ПБ-03-273-99 "Правила аттестации сварщиков и специалистов сварочного производства"
-                    </a>
-                </p>
-                <div class="small__line__rules"></div>
-                <p class="rules__attestion">
-                    <a href="#" download="" title="Скачать документ" class="">
-                        Рекомендации по применению РД 03-495-02 на строительных объектах
-                    </a>
-                </p>
-                <div class="small__line__rules"></div>
-                <p class="rules__attestion">
-                    <a href="#" download="" title="Скачать документ" class="">
-                        Перечень групп технических устройств опасных производственных объектов
-                    </a>
-                </p>
-                <div class="small__line__rules"></div>
-                <p class="rules__attestion">
-                    <a href="#" download="" title="Скачать документ" class="">
-                        Инструкция по оформлению заявок на аттестацию и результатов аттестации Заявителей -
-                        физических лиц
-                    </a>
-                </p>
-                <div class="small__line__rules"></div>
-
-                <p class="rules__attestion">
-                    <a href="#" download="" title="Скачать документ" class="">
-                        Положение о порядке продления срока действия аттестационных удостоверений сварщиков и
-                        специалистов
-                        сварочного производства
-                    </a>
-                </p>
-                <div class="small__line__rules"></div>
-
-                <p class="rules__attestion">
-                    <a href="#" download="" title="Скачать документ" class="">
-                        Требование к кандидатами <br> на аттестацию
-                    </a>
-                </p>
+                </p> {% endcomment %}
+                
             </div>
