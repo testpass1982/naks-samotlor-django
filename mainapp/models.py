@@ -115,6 +115,7 @@ class Article(ContentMixin):
 
 class Document(models.Model):
     title = models.CharField(u'Название', max_length=500)
+    url_code = models.CharField(u'Код ссылки', max_length=30, blank=True, default='НЕ УКАЗАН')
     document = models.FileField(verbose_name='Документ',
                                 upload_to="documents/",
                                 validators=[FileExtensionValidator(
