@@ -405,20 +405,10 @@ p {
 
 // Background + info
 
-.sasp__logo {
+.logo_sasv {
+    width: 100px;
     margin-bottom: 25px;
     font-size: 16px;
-
-    @media screen and (max-width: 480px) {
-        width: 300px;
-        height: 85px;
-    }
-
-    @media screen and (max-width: 768px) {
-        width: 300px;
-        height: 85px;
-    }
-
     @media screen and (max-width: 320px) {
         width: 300px;
         height: 85px;
