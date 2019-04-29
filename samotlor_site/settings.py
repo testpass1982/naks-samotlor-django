@@ -26,7 +26,11 @@ SECRET_KEY = '5(0_*v&y75=4ovu-afu^md*nw_ezbgg7#0nk3j=g91gcil5nl7'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['naks-smolensk.minml.ru']
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['naks-samotlor.minml.ru']
+=======
+ALLOWED_HOSTS = ['*']
+>>>>>>> d2a76a41d4152ee83ba7624d4e37edba8dd36df6
 
 
 # Application definition
