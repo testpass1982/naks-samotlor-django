@@ -41,3 +41,10 @@ def doc_title(url_code):
         title = 'Создайте документ с кодом {}'.format(url_code)
     return title
 
+@register.simple_tag
+def chunk(chunk_code):
+    try:
+        chunk = Chunk.objects.get(code=chunk_code).html
+    except Chunk.DoesNotExist:
+        chunk = 'Создайте вставку с кодом {}'.format(chunk_code)
+    return chunk

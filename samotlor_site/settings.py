@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'scribbler',
 ]
 
+SCRIBBLER_CACHE_TIMEOUT = 1 * 60
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
