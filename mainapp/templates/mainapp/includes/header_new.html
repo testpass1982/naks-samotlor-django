@@ -13,7 +13,7 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-lg-6">
         <div class="head__text__numbercok__two float-right d-inline-block">
-          ООО «НАКС-Самотлор» в реестрах НАКС:
+          ООО АЦ «НАКС САМОТЛОР» в реестрах НАКС:
 
           <div class="drop-acst d-inline-block">
             <button class="list__acst__center dropdown-toggle" title="Выбрать центр" type="button"
@@ -21,8 +21,8 @@
               СУР-20АЦ
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">СУР-20АЦ-1АП</a>
-              <a class="dropdown-item" href="#">СУР-20АЦ-2АП</a>
+              <a class="dropdown-item" href="http://naks.ru/assp/reestrac/index.php?ID=540541445" target="_blank">СУР-20АЦ</a>
+              <a class="dropdown-item" href="http://naks.ru/specpod/racsp/index.php?ID=540541446" target="_blank">СУР-1ЦСП</a>
 
             </div>
           </div>
@@ -32,13 +32,13 @@
   </div>
 </header>
 
-<div class="header__block__two">
-  <div class="container">
+<div class="container">
+  <div class="header__block__two">
     <div class="row align-items-center">
       <div class="col-xs-12 col-md-12 col-lg-4 col-xl-3">
         <a href="{% url 'index' %}">
           <div class="logo__blue__header">
-            <img src="{% static 'img/arkhangelsk__logo__header.png' %}" alt="">
+            <img src="{% static 'img/logo_header.png' %}" alt="">
           </div>
         </a>
       </div>
@@ -71,7 +71,7 @@
 
       </div>
 
-      <div class="col-xl-2">
+      <div class="col-md-2 col-xl-2">
         <div class="header__buttons-container">
           <button class="button__zayavka">
             <a href="#" data-toggle="modal" data-target="#modal-statement">
@@ -79,13 +79,11 @@
           </button>
         </div>
       </div>
-      <div class="col-xl-2">
-        <div class="header__buttons-container">
-          <button class="button__system__edo">
-            <a href="https://ac.naks.ru/" target="_blank">
-              Войти в систему ЭДО</a>
-          </button>
-        </div>
+      <div class="col-md-2 col-xl-2">
+          <a href="http://www.naks.ru/"  class="logo_sasv" target="_blank">
+            <img src="{% static 'img/logo_sasv.png' %}" class="logo_sasv_img"  title="Национальное Агентство Контроля Сварки"
+                alt="">
+        </a>
       </div>
     </div>
   </div>

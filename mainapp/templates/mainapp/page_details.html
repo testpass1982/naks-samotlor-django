@@ -79,7 +79,7 @@
       <div class="box__news__content__main">
         <p class="news__naks__tag__maine d-inline-block">{{ post.tags.all.first }}</p>
         <p class="date__news__maine d-inline-block float-right">{{ post.published_date }}</p>
-        <a href="#">
+        <a href="{% url 'detailview' 'post' post.pk %}#page-top">
           <p class="text__content__news__main">
             {{ post.title }}
           </p>
