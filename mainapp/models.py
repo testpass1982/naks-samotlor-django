@@ -304,3 +304,16 @@ class ChlenKomissii(models.Model):
         verbose_name_plural = 'Члены комиссии'
     def __str__(self):
         return '{} удостоверение {}'.format(self.fio, self.udost_number)
+
+class Chunk(models.Model):
+    """class for making html chunks on pages"""
+    title = models.CharField(u'Название вставки', max_length=64)
+    code = models.CharField(u'Уникальный код вставки', max_length=64, default='КОД_ВСТАВКИ')
+    html = RichTextUploadingField(u'Форматирование вставки')
+
+    class Meta:
+        verbose_name = 'Вставка'
+        verbose_name_plural = 'Вставки'
+
+    def __str__(self):
+        return self.title
