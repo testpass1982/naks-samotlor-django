@@ -317,3 +317,19 @@ class Chunk(models.Model):
 
     def __str__(self):
         return self.title
+
+class Profile(models.Model):
+    """class for templating organization"""
+    org_short_name = models.CharField(u'Краткое название организации', max_length=600, blank=True, null=True, default=None)
+    org_full_name = models.CharField(u'Полное название организации', max_length=600, blank=True, null=True, default=None)
+    org_intro = models.CharField(u'Текст для главной страницы', max_length=600, blank=True, null=True, default=None)
+    org_phones = models.CharField(u'Телефоны', max_length=600, blank=True, null=True, default=None)
+    org_email = models.CharField(u'Адрес электронной почты', max_length=600, blank=True, null=True, default=None)
+    org_address = models.CharField(u'Адрес местоположения организации', max_length=600, null=True, blank=True, default=None)
+
+    class Meta:
+        verbose_name = 'Профиль организации'
+        verbose_name_plural = 'Профили организации'
+
+    def __str__(self):
+        return self.org_short_name

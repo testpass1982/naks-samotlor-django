@@ -4,7 +4,7 @@ from django.utils.encoding import force_text
 from django.utils.html import format_html
 
 from .models import Post, Category, Tag, Document, PostPhoto, Article, Message, Contact
-from .models import Staff, Registry, Menu, ChlenKomissii
+from .models import Staff, Registry, Menu, ChlenKomissii, Chunk, Profile
 from scribbler.models import Scribble
 # from .models import WeldData
 # from .domain_model import WeldOrg, Welder
@@ -126,6 +126,19 @@ class MessageAdmin(admin.ModelAdmin):
 class MenuAdmin(admin.ModelAdmin):
     list_display = ['title', 'url_code', 'url']
 
+from django import forms
+class ProfileModelForm(forms.ModelForm):
+    org_short_name = forms.CharField(widget=forms.Textarea)
+    org_full_name = forms.CharField(widget=forms.Textarea)
+    org_intro = forms.CharField(widget=forms.Textarea)
+    org_phones = forms.CharField(widget=forms.Textarea)
+    org_email = forms.CharField(widget=forms.Textarea)
+    org_address = forms.CharField(widget=forms.Textarea)
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    form = ProfileModelForm
+
 admin.site.register(Tag)
 admin.site.register(Category)
 admin.site.register(Contact)
@@ -133,6 +146,8 @@ admin.site.register(Staff)
 admin.site.register(Registry)
 admin.site.register(ChlenKomissii)
 admin.site.register(Scribble)
+# admin.site.register(Profile)
+admin.site.register(Chunk)
 #another_test
 #test
 # admin.site.register(WeldOrg)
