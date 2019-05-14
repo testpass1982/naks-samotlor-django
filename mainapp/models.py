@@ -325,6 +325,8 @@ class Profile(models.Model):
     org_intro = models.CharField(u'Текст для главной страницы', max_length=600, blank=True, null=True, default=None)
     org_phones = models.CharField(u'Телефоны', max_length=600, blank=True, null=True, default=None)
     org_email = models.CharField(u'Адрес электронной почты', max_length=600, blank=True, null=True, default=None)
+    org_header_emails = models.CharField(u'Адреса электронной почты (для хедера)', max_length=600, blank=True, null=True, default=None)
+    org_header_phones = models.CharField(u'Телефоны (для хедера)', max_length=600, blank=True, null=True, default=None)
     org_address = models.CharField(u'Адрес местоположения организации', max_length=600, null=True, blank=True, default=None)
 
     class Meta:

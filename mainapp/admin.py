@@ -133,6 +133,8 @@ class ProfileModelForm(forms.ModelForm):
     org_intro = forms.CharField(widget=forms.Textarea)
     org_phones = forms.CharField(widget=forms.Textarea)
     org_email = forms.CharField(widget=forms.Textarea)
+    org_header_emails = forms.CharField(widget=forms.Textarea)
+    org_header_phones = forms.CharField(widget=forms.Textarea)
     org_address = forms.CharField(widget=forms.Textarea)
 
 @admin.register(Profile)

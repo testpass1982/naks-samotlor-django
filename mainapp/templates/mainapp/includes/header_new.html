@@ -42,30 +42,24 @@
           </div>
         </a>
       </div>
+
       <div class="col-xs-6 col-sm-5 col-md-5 col-lg-3 col-xl-2">
         <div class="header__number">
-          {% scribble 'phones1' %}
           <p>8 (902) 855-80-81</p>
           <p>8 (919) 53-98-333</p>
-          {% endscribble %}
         </div>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-5 col-lg-3 col-xl-2">
         <div class="header__number">
-          {% scribble 'phones2' %}
           <p class="text-left">8 (902) 855-47-02</p>
           <p class="text-left">8 (904) 870-19-05</p>
-          {% endscribble %}
         </div>
       </div>
+
       <div class="col-xs-2 col-sm-3 col-md-2 col-lg-2 col-xl-1">
         <div class="mail__box">
 
-          {% scribble 'email' %}
-          <p><a href="mailto:sur20ac@mail.ru" class="header__mail" title="написать письмо">sur20ac@mail.ru</a></p>
-          <p><a href="mailto:sur15acsamotlor@mail.ru" class="header__mail"
-              title="Написать письмо">sur15acsamotlor@mail.ru</a></p>
-          {% endscribble %}
+          {% scribble_field profile 'org_header_emails' %}
 
         </div>
 
