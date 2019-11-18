@@ -5,11 +5,9 @@
     <div class="row align-items-center">
       <div class="col-xs-12 col-sm-6 col-lg-6">
         <div class="head__text__adres d-flex align-items-center">
-          <img src="{% static 'img/here.png' %}" alt="">
-          {% scribble 'address' %}
-          628600, г. Нижневартовск, Западный промышленный узел, панель 4, ул. Индустриальная, д. 89
-          {% endscribble %}
-        </div>
+          <img src="{% static 'img/here.png' %}" alt="">&nbsp;
+          {% scribble_field profile 'org_address' %}
+          </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-lg-6">
         <div class="head__text__numbercok__two float-right d-inline-block">
